@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase : {
+    apiKey: "AIzaSyA5abuVaR13zcIeCecRkDz3-zoxX5ZZyuU",
+    authDomain: "pokemontcgp-wav1.firebaseapp.com",
+    projectId: "pokemontcgp-wav1",
+    storageBucket: "pokemontcgp-wav1.firebasestorage.app",
+    messagingSenderId: "490184607651",
+    appId: "1:490184607651:web:5a30332e82af2c983dfc16"
+  }
 };
 
 /*

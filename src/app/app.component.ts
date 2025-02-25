@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { initializeApp } from 'firebase/app';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PokemonTCGPv1';
+  title = 'Pokemon TCGP Tracker';
+
+  moveHighlight(index: MouseEvent): void {
+    const target = index.target as HTMLElement;
+    const highlight = document.getElementById('nav-highlight');
+    if (highlight && target) {
+      highlight.style.width = `${target.offsetWidth}px`;
+      highlight.style.left = `${target.offsetLeft}px`;
+    }
+  }
+
+  constructor() {
+    const app = initializeApp(environment.firebase);
+    console.log('Firebase App Initialized:', app);
+  }
 }
