@@ -22,6 +22,6 @@ export class PokemonService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${environment.apiKey}`
     });
-    return this.http.get<any>(`${this.apiUrl}?pageSize=80`, { headers });
+    return this.http.get<any>(`${this.apiUrl}?pageSize=20`, { headers });
   }
 }
