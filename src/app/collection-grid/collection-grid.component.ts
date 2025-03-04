@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from '../services/pokemon.service';
+import { PokemonService } from '../../../../PokemonTCGPv1/src/app/services/pokemon.service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-collection-grid',
   templateUrl: './collection-grid.component.html',
+  imports: [
+    RouterLink
+  ],
   styleUrls: ['./collection-grid.component.css']
 })
 export class CollectionGridComponent implements OnInit {

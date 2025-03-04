@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PokemonService } from '../services/pokemon.service';
+import { PokemonService } from '../../../../PokemonTCGPv1/src/app/services/pokemon.service';
 
 @Component({
   selector: 'app-card-details',

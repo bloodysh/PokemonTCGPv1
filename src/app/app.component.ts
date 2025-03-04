@@ -1,11 +1,11 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { initializeApp } from 'firebase/app';
-import { environment } from '../environments/environment';
+import { Component } from '@angular/core';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'Pokemon TCGP Tracker';
@@ -17,10 +17,5 @@ export class AppComponent {
       highlight.style.width = `${target.offsetWidth}px`;
       highlight.style.left = `${target.offsetLeft}px`;
     }
-  }
-
-  constructor() {
-    const app = initializeApp(environment.firebase);
-    console.log('Firebase App Initialized:', app);
   }
 }
