@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../services/pokemon.service';
 
 @Component({
   selector: 'app-collection-grid',
@@ -6,14 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./collection-grid.component.css']
 })
 export class CollectionGridComponent implements OnInit {
+  images: { id: string, url: string }[] = [];
 
-  images: { id: number, url: string }[] = [];
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
-    const imageCount = 286; // Replace with the actual number of images
-    for (let i = 1; i <= imageCount; i++) {
-      const imageNumber = i.toString().padStart(3, '0'); // Pad the number with leading zeros
-      this.images.push({ id: i, url: `assets/images/A1_${imageNumber}_EN.webp` });
-    }
+    this.fetchPokemonCards();
+  }
+
+  fetchPokemonCards(): void {
+    this.pokemonService.getPokemonCards().subscribe(
+      data => {
+        this.images = data.data.map((card: any) => ({
+          id: card.id,
+          url: card.images.small
+        }));
+      },
+      error => {
+        console.error('Error fetching Pokemon cards', error);
+      }
+    );
   }
 }

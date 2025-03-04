@@ -1,4 +1,12 @@
 <div class="card-details">
-    <h2>Card Details for Card ID: {{ cardId }}</h2>
-    <!-- Display card details here -->
+  <h2>Card Details for Card ID: {{ cardId }}</h2>
+  <div *ngIf="cardDetails">
+    <h3>{{ cardDetails.data.name }}</h3>
+    <p>{{ cardDetails.data.description }}</p>
+    <img [src]="cardDetails.data.images.large" alt="{{ cardDetails.data.name }}">
+    <!-- Add more card details as needed -->
   </div>
+  <div *ngIf="!cardDetails">
+    <p>Loading card details...</p>
+  </div>
+</div>

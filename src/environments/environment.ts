@@ -11,7 +11,8 @@ export const environment = {
     storageBucket: "pokemontcgp-wav1.firebasestorage.app",
     messagingSenderId: "490184607651",
     appId: "1:490184607651:web:5a30332e82af2c983dfc16"
-  }
+  },
+  apiKey : 'c60b9398-a0af-4b42-a0b2-3063985ec895'
 };
 
 /*

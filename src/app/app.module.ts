@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { CollectionGridComponent } from './collection-grid/collection-grid.component';
 import { HomeComponent } from './home/home.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CardDetailsComponent } from './card-details/card-details.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
