@@ -1,4 +1,8 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     background-color : #292853;
 }
 
@@ -9,7 +13,7 @@ body {
 
 @font-face {
     font-family: myH2;
-    src: url(h2.ttf);
+    src: url(Poppins-Light.ttf);
 }
 
 h1 {

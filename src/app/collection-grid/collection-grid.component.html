@@ -1,10 +1,10 @@
 <div class="collection-container">   
   <h2>Pokemon Card Collection</h2>
-    <div class="collection-grid">
-      <div class="image-card" *ngFor="let image of images">
-        <div class="holo-effect">
-          <img [src]="image" alt="Pokemon Card">
-        </div>
-      </div>
+  <div class="collection-grid">
+    <div class="image-card" *ngFor="let image of images">
+      <a [routerLink]="['/card-details', image.id]" class="holo-effect">
+        <img [src]="image.url" alt="Pokemon Card">
+      </a>
     </div>
+  </div>
 </div>

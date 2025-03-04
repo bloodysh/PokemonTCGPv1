@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { initializeApp } from 'firebase/app';
 import { environment } from '../environments/environment';
 
@@ -10,8 +10,8 @@ import { environment } from '../environments/environment';
 export class AppComponent {
   title = 'Pokemon TCGP Tracker';
 
-  moveHighlight(index: MouseEvent): void {
-    const target = index.target as HTMLElement;
+  moveHighlight(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
     const highlight = document.getElementById('nav-highlight');
     if (highlight && target) {
       highlight.style.width = `${target.offsetWidth}px`;

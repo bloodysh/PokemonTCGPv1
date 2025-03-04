@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-collection-grid',
@@ -7,13 +7,13 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class CollectionGridComponent implements OnInit {
 
-  images: string[] = [];
+  images: { id: number, url: string }[] = [];
 
   ngOnInit(): void {
     const imageCount = 286; // Replace with the actual number of images
     for (let i = 1; i <= imageCount; i++) {
       const imageNumber = i.toString().padStart(3, '0'); // Pad the number with leading zeros
-      this.images.push(`assets/images/A1_${imageNumber}_EN.webp`);
+      this.images.push({ id: i, url: `assets/images/A1_${imageNumber}_EN.webp` });
     }
   }
 }

@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CollectionGridComponent } from './collection-grid/collection-grid.component';
 import { HomeComponent } from './home/home.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CollectionGridComponent,
-    HomeComponent
+    HomeComponent,
+    CardDetailsComponent
   ],
   imports: [
     BrowserModule,
