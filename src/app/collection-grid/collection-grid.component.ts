@@ -16,7 +16,7 @@ export class CollectionGridComponent implements OnInit {
   }
 
   fetchPokemonCards(): void {
-    this.pokemonService.getPokemonCards().subscribe(
+    this.pokemonService.getCardsInTypeOrder().subscribe(
       data => {
         this.images = data.data.map((card: any) => ({
           id: card.id,

@@ -24,4 +24,11 @@ export class PokemonService {
     });
     return this.http.get<any>(`${this.apiUrl}?pageSize=20`, { headers });
   }
+
+  getCardsInTypeOrder(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${environment.apiKey}`
+    });
+    return this.http.get<any>(`${this.apiUrl}?orderBy=type`, { headers });
+  }
 }
