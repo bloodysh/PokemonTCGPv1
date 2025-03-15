@@ -1,30 +1,62 @@
-.collection-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .collection-container h2 {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  
-  .collection-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-  }
-  
-  .image-card {
-    border: 0px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .image-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.filter-controls {
+  margin-bottom: 20px;
+}
+
+.type-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.type-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: all 0.2s;
+}
+
+.type-button:hover {
+  background-color: #d0d0d0;
+}
+
+.type-button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Type-specific colors */
+.type-button:nth-child(1) { /* Grass */
+  background-color: #78c850;
+  color: white;
+}
+
+.type-button:nth-child(2) { /* Fire */
+  background-color: #f08030;
+  color: white;
+}
+
+.type-button:nth-child(3) { /* Water */
+  background-color: #6890f0;
+  color: white;
+}
+
+.type-button:nth-child(4) { /* Lightning */
+  background-color: #f8d030;
+  color: black;
+}
+
+.type-button:nth-child(5) { /* Psychic */
+  background-color: #f85888;
+  color: white;
+}
+
+/* Add more type-specific colors as needed */
+
+h3 {
+  margin: 20px 0;
+  color: #ffffff;
+  text-align: center;
+}
