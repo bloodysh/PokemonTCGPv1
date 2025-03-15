@@ -5,7 +5,8 @@ import { PokemonService } from '../services/pokemon.service';
 @Component({
   selector: 'app-collection-grid',
   templateUrl: './collection-grid.component.html',
-  styleUrls: ['./collection-grid.component.css']
+  styleUrls: ['./collection-grid.component.css'],
+    standalone: false
 })
 export class CollectionGridComponent implements OnInit {
   images: { id: string, url: string }[] = [];
