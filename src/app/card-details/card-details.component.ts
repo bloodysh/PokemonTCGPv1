@@ -3,9 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { PokemonService } from '../../../../PokemonTCGPv1/src/app/services/pokemon.service';
 
 @Component({
-  selector: 'app-card-details',
-  templateUrl: './card-details.component.html',
-  styleUrls: ['./card-details.component.css']
+    selector: 'app-card-details',
+    templateUrl: './card-details.component.html',
+    styleUrls: ['./card-details.component.css'],
+    standalone: false
 })
 export class CardDetailsComponent implements OnInit {
   cardId!: string;
